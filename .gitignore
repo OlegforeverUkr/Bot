@@ -23,3 +23,5 @@ pgsql/
 # static files storage
 /static/*
 !/static/index.html
+
+settings.py
