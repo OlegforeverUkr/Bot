@@ -22,5 +22,10 @@ select_menu = ReplyKeyboardMarkup(keyboard=[
         KeyboardButton(
             text="Ethereum"
         )
-    ]
+    ],
+    [
+        KeyboardButton(
+            text="Pizza"
+        )
+    ],
 ])

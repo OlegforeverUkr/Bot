@@ -2,9 +2,10 @@ from aiogram import Bot, Dispatcher, F
 from aiogram.enums import ContentType
 from aiogram.filters import CommandStart, Command
 
-from settings import TOKEN
+from setting import TOKEN
 from core.handlers.basic import get_start, get_photo, say_hi, echo, help
 from core.handlers.corses import get_dollar, get_euro, get_bitcoin, get_ether
+from core.handlers.pizza import get_menu_pizza
 from core.filters.fileters import MyFilter
 from core.utils.commands import get_commands
 from core.handlers.pay import order, pre_check, succsess_pay
@@ -32,6 +33,7 @@ async def start():
     dp.message.register(get_euro, MyFilter('Euro'))
     dp.message.register(get_bitcoin, MyFilter('Bitcoin'))
     dp.message.register(get_ether, MyFilter('Ether'))
+    dp.message.register(get_menu_pizza, F.text == "Pizza")
     dp.message.register(help, MyFilter('Help'))
     dp.message.register(echo)
 

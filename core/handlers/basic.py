@@ -20,10 +20,6 @@ async def say_hi(message: Message, bot: Bot):
     await message.answer(f"И тебе привет!!!")
 
 
-async def say_hi(message: Message, bot: Bot):
-    await message.answer(f"И тебе привет!!!")
-
-
 async def help(message: Message, bot: Bot):
     await message.answer(f"Привет, {message.from_user.first_name}, это бот поможет узнать курс валют, жми на START")
 
